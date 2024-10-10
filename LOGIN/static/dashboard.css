@@ -1,49 +1,20 @@
-/*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-    padding-top: 50px;
-}
-  
-/*
- * Global add-ons
- */
-  
-.sub-header {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+.container {
+    width: 100%; /* Ajusta según tus necesidades */
+    max-width: 900px; /* Limita el ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    padding: 200px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
 }
 
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-    border: 0;
-}
-  
-/*
- * Main content
- */
-
-.main {
-    padding: 20px;
-}
-@media (min-width: 768px) {
-    .main {
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-}
-.main .page-header {
-    margin-top: 0;
+.table-container {
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Centra la tabla horizontalmente */
+    margin-top: 30px; /* Espacio entre el botón y la tabla */
 }
 
-/* Estilo para aumentar ligeramente el tamaño del texto de "Usuarios registrados" */
-.usuarios-registrados {
-    font-size: 1.5em; /* Ajusta este valor para aumentar o disminuir el tamaño */
-    font-weight: bold;
+.table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+    max-width: 999px; /* Limita el ancho de la tabla */
 }
-

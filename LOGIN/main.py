@@ -131,6 +131,10 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('index'))
 
+@app.route("/notas")
+def notas():
+    return redirect(url_for('notas.html'))
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

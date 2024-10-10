@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'notas.css')}}" />
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <form method="POST">
+            <input type="text" name="content" placeholder="Agregar nueva tarea">
+            <button type="submit">+</button>
+        </form>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {{ task.content }}
+                    <a href="{{ url_for('delete', id=task.id) }}" class="delete">X</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
