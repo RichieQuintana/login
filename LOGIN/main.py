@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, session, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.secret_key = "clave_secreta"
@@ -9,6 +10,7 @@ app.secret_key = "clave_secreta"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 # Modelo de usuario
 class Usuario(db.Model):
