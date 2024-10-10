@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="notas.html">Panel de guestion de Usuarios</a>
+            <a class="navbar-brand" >Panel de guestion de Usuarios</a>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Cerrar sesión</a></li>
             </ul>
@@ -28,7 +28,6 @@
             <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
 
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createUserModal">Crear Nuevo Usuario</button>
                 </div>
                 <div class="table-responsive">
@@ -61,7 +60,7 @@
         </div>
     </div>
 
-    <!-- Crear Usuario Modal -->
+    <!-- Crear Usuario -->
     <div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -91,7 +90,7 @@
     </div>
 
     {% for user in users %}
-    <!-- Editar Usuario Modal -->
+    <!-- Editar Usuario -->
     <div class="modal fade" id="editUserModal{{ user.id }}" tabindex="-1" aria-labelledby="editUserModalLabel{{ user.id }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -110,7 +109,7 @@
                             <input type="email" class="form-control" id="email{{ user.id }}" name="email" value="{{ user.email }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="password{{ user.id }}" class="form-label">Nueva Contraseña (dejar en blanco para mantener la actual)</label>
+                            <label for="password{{ user.id }}" class="form-label">Nueva Contraseña</label>
                             <input type="password" class="form-control" id="password{{ user.id }}" name="password">
                         </div>
                         <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
@@ -120,7 +119,7 @@
         </div>
     </div>
 
-    <!-- Eliminar Usuario Modal -->
+    <!-- Eliminar Usuario -->
     <div class="modal fade" id="deleteUserModal{{ user.id }}" tabindex="-1" aria-labelledby="deleteUserModalLabel{{ user.id }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -141,6 +140,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+    
     <script>
         (function () {
             'use strict'
