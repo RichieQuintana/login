@@ -34,7 +34,7 @@ flask db migrate
 flask db upgrade
 
 
-
+Video: https://youtu.be/4f-us1XUa_M
 
 
 
