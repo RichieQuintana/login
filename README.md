@@ -21,6 +21,7 @@ Este proyecto es una aplicación web de inicio de sesión y registro desarrollad
 - Python 3.x
 - Flask-Migrate
 - Flask-SQLAlchemy
+- Flask Login
 
 ## Recomendaciones
 
